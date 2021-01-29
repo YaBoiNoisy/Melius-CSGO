@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="build/bootstrap.min.css" rel="stylesheet">
+
+    <title>Melius - Legit Cheats</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a class="nav-link active" id="legit-settings-tab" data-bs-toggle="tab" href="#legit-settings" role="tab" aria-controls="legit-settings" aria-selected="true">Legit settings</a>
+        <a class="nav-link" id="spectators-tab" data-bs-toggle="tab" href="#spectators" role="tab" aria-controls="spectators" aria-selected="false">Spectators</a>
+        <a class="nav-link" id="skin-changer-tab" data-bs-toggle="tab" href="#skin-changer" role="tab" aria-controls="skin-changer" aria-selected="false">Skin changer</a>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="legit-settings" role="tabpanel" aria-labelledby="legit-settings-tab">
+        <div style="margin: 10px 20px;">
+          <!-- Bunnyhop -->
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="bunnyhopCheckbox">
+            <label class="form-check-label" for="bunnyhopCheckbox">
+              Bunnyhop
+            </label>
+          </div>
+          <!-- Chams -->
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="chamsCheckbox">
+            <label class="form-check-label" for="chamsCheckbox">
+              Chams
+            </label>
+          </div>
+          <div style="margin-left:20px;">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="chamsEnemyCheckbox">
+              <label class="form-check-label" for="chamsEnemyCheckbox">
+                Enemy
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="chamsAllayCheckbox">
+              <label class="form-check-label" for="chamsAllayCheckbox">
+                Allay
+              </label>
+            </div>
+          </div>
+          <!-- Glow -->
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="glowCheckbox">
+            <label class="form-check-label" for="glowCheckbox">
+              Glow
+            </label>
+          </div>
+          <div style="margin-left:20px;">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="glowEnemyCheckbox">
+              <label class="form-check-label" for="glowEnemyCheckbox">
+                Enemy
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="glowAllayCheckbox">
+              <label class="form-check-label" for="glowAllayCheckbox">
+                Allay
+              </label>
+            </div>
+          </div>
+          <!-- No flash -->
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="noFlashCheckbox">
+            <label class="form-check-label" for="noFlashCheckbox">
+              No flash
+            </label>
+          </div>
+          <!-- Radar -->
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="radarCheckbox">
+            <label class="form-check-label" for="radarCheckbox">
+              Radar
+            </label>
+          </div>
+          <!-- Recoil control system -->
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="rcsCheckbox">
+            <label class="form-check-label" for="rcsCheckbox">
+              Recoil control system
+            </label>
+          </div>
+          <!-- Triggerbot -->
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="triggerbotCheckbox">
+            <label class="form-check-label" for="triggerbotCheckbox">
+              Triggerbot
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="spectators" role="tabpanel" aria-labelledby="spectators-tab">
+        In development
+      </div>
+      <div class="tab-pane fade" id="skin-changer" role="tabpanel" aria-labelledby="skin-changer-tab" style="margin: 10px 20px;">
+        <select class="form-select" id="weapons-list">
+          <option>Choose a weapon</option>
+        </select>
+        <div id="weapon-options">
+          <select class="form-select" id="skins-list" style="display: none; margin-top: 10px;">
+            <option>Choose a skin</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <script src="build/bootstrap.bundle.min.js"></script>
+    <script defer src="main.js"></script>
+  </body>
+</html>
