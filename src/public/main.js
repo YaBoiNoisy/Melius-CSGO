@@ -138,3 +138,14 @@ skinsListSelect.addEventListener('change', ({ target }) => {
         jsonfile.writeFileSync('./skins.json', skins);
     }
 });
+
+// Check if we should display searching for csgo
+setInterval(() => {
+    const state = jsonfile.readFileSync('./state.json');
+    const loading = document.querySelector('.loading');
+    if (state.foundGame) {
+        loading.style.display = 'none';
+    } else {
+        loading.style.display = 'flex';
+    }
+}, 250);

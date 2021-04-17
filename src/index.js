@@ -1,5 +1,7 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
+const jsonfile = require('jsonfile');
+
 const { cheat } = require('./cheat/index');
 
 if (require('electron-squirrel-startup')) {
@@ -17,8 +19,11 @@ const createWindow = () => {
   mainWindow.setMenu(null)
   mainWindow.loadFile(path.join(__dirname, './public/index.html'));
 
+  // Set default loading
+  jsonfile.writeFile('./state.json', { foundGame: false });
+
   cheat.getProcess();
-  mainWindow.webContents.on("devtools-opened", () => { win.webContents.closeDevTools(); });
+  // mainWindow.webContents.on("devtools-opened", () => { win.webContents.closeDevTools(); });
   // mainWindow.webContents.openDevTools();
 };
 

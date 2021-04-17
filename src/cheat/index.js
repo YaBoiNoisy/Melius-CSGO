@@ -1,4 +1,5 @@
 const fs = require('fs').promises;
+const jsonfile = require('jsonfile');
 
 const { setProcessState } = require('./controllers/processState');
 const { setOffsets } = require('./controllers/offsets');
@@ -21,6 +22,9 @@ module.exports.cheat = {
             await this.cheat.createThread();
         } catch (error) {
             console.log('ERROR - CSGO not running', error);
+            setTimeout(() => {
+                this.cheat.getProcess();
+            }, 2000)
         }
     },
     createThread: async () => {
@@ -33,6 +37,8 @@ module.exports.cheat = {
                 const props = require(`./features/${jsFile}`);
                 setInterval(props.execute, props.settings.delay);
             });
+            jsonfile.writeFile('./state.json', { foundGame: true });
+
         } catch (error) {
             console.log('ERROR - Faild to createThread(): ', error);
         }
