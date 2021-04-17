@@ -5,6 +5,8 @@ Melius is a legit CSGO cheat that was built in electron
 
 ![Melius Skin changer](images/skin-changer.PNG?raw=true)
 
+![Melius Searching for CSGO](images/searchingForCSGO.gif?raw=true)
+
 ### Features
 * Bunnyhop
 * Chams
