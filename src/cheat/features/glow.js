@@ -19,39 +19,34 @@ const setGlow = (
     memoryjs.INT
   );
   pMemory.writeMemory(
-    dwGlowObjectManager + (index * 0x38 + 0x4),
+    dwGlowObjectManager + (index * 0x38 + 0x8),
     color.r / 255,
     memoryjs.FLOAT
   );
   pMemory.writeMemory(
-    dwGlowObjectManager + (index * 0x38 + 0x8),
+    dwGlowObjectManager + (index * 0x38 + 0xC),
     color.g / 255,
     memoryjs.FLOAT
   );
   pMemory.writeMemory(
-    dwGlowObjectManager + (index * 0x38 + 0xc),
+    dwGlowObjectManager + (index * 0x38 + 0x10),
     color.b / 255,
     memoryjs.FLOAT
   );
   pMemory.writeMemory(
-    dwGlowObjectManager + (index * 0x38 + 0x10),
+    dwGlowObjectManager + (index * 0x38 + 0x14),
     color.a / 255,
     memoryjs.FLOAT
   );
 
   pMemory.writeMemory(
-    dwGlowObjectManager + (index * 0x38 + 0x24),
+    dwGlowObjectManager + (index * 0x38 + 0x28),
     bRenderWhenOccluded,
     memoryjs.BOOL
   );
   pMemory.writeMemory(
-    dwGlowObjectManager + (index * 0x38 + 0x25),
+    dwGlowObjectManager + (index * 0x38 + 0x29),
     bRenderWhenUnoccluded,
-    memoryjs.BOOL
-  );
-  pMemory.writeMemory(
-    dwGlowObjectManager + (index * 0x38 + 0x26),
-    bFullBloom,
     memoryjs.BOOL
   );
 };
